@@ -13,6 +13,7 @@ html body {
 }
 
 #camera--trigger {
+  position: fixed;
   width: 50%;
   left: calc(50% - 25%);
   bottom: 30px;
@@ -28,6 +29,7 @@ html body {
 }
 
 .taken {
+  position: fixed;
   width: 100px !important;
   height: 100px !important;
   right: 20px;
