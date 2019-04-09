@@ -12,7 +12,7 @@ function cameraStart() {
         cameraView.srcObject = stream;
     })
     .catch(function(error) {
-        console.error("Error hooking into camera", error);
+        console.error("Error: cannot access camera", error);
     });
 }
 
@@ -23,6 +23,7 @@ cameraTrigger.onclick = function() {
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
     cameraOutput.classList.add("taken");
+    cameraStart();
 }
 
 // Start the video stream when the window loads
